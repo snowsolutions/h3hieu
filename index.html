@@ -49,9 +49,6 @@
         init();
 
         function init() {
-            setInterval(function () {
-                window.location.reload();
-            }, 5000)
             initServerResetObserver()
             $('#dead-count span.text-value').text(deadCount)
         }
@@ -82,6 +79,7 @@
                     setTimeout(function () {
                         $('.day-reset-task-block').removeClass('active')
                         window.serverResetFlag = false;
+                        window.location.reload();
                     }, 3000)
                 }
             }
